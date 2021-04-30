@@ -4,16 +4,16 @@ import "fmt"
 
 func main() {
 
-	// var colors map[string]string
+	colors := map[string]string{
+		"red":   "#523636",
+		"blue":  "#54555",
+		"white": "#fffff",
+	}
+	printMap(colors)
+}
 
-	colors := make(map[int]string)
-
-	// colors := map[string]string{
-	// 	"red":  "#523636",
-	// 	"blue": "#54555",
-	// }
-
-	colors[10] = "ggsgsg"
-	delete(colors, 10)
-	fmt.Println(colors)
+func printMap(c map[string]string) {
+	for color, hex := range c {
+		fmt.Println("hex code for", color, "is", hex)
+	}
 }
